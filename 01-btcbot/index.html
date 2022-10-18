@@ -1,0 +1,400 @@
+<!--Muhammet Furkan Ayhan-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammet Furkan Ayhan</title>
+</head>
+
+<body style="background-color: #F4F7FC;">
+  <nav class="navbar navbar-dark bg-white"">
+    <span class=" navbar-brand mb-0" style="color: #0058FF;">BTC<b>bot</b></span>
+  </nav>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="p-2 col-md">
+        <div class="cb150 card">
+          <div class="card-body">
+            <div class="font-16 font-weight-light">BTC Price</div>
+            <p class="font-28 font-weight-bold" style="font-size: 28px;">$ <span id="btcPrice">-</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 col-md">
+        <div class="cb150 card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-6">
+                <div class="font-16 font-weight-light">BTC in my wallet</div>
+              </div>
+              <div class="col-md-12 col-6">
+                <div class="font-28 font-weight-bold" style="font-size: 28px;">
+                  <span>&#8383;</span> 3,23422
+                </div>
+              </div>
+              <div class="col-6 order-md-2">
+                <img src="g1.jpg" class="mw-100" />
+              </div>
+              <div class="col-6 order-md-1">
+                <div class="font-16 text-danger font-weight-bold">2.5% &#8595;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 col-md">
+        <div class="cb150 card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-6">
+                <div class="font-16 font-weight-light">Dollar in my wallet</div>
+              </div>
+              <div class="col-md-12 col-6">
+                <div class="font-28 font-weight-bold" style="font-size: 28px;">$3161</div>
+              </div>
+              <div class="col-6 order-md-2">
+                <img src="g2.jpg" class="mw-100" />
+              </div>
+              <div class="col-6 order-md-1">
+                <div class="font-16 text-success font-weight-bold">2.3% &#8593;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 col-md">
+        <div class="cb150 card">
+          <div class="card-body">
+            <div class="font-16 font-weight-light">Daily buy transaction count</div>
+            <p class="font-34 font-weight-bold" style="font-size: 34px;">5</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 col-md">
+        <div class="cb150 card">
+          <div class="card-body">
+            <div class="font-16 font-weight-light">Daily sell transaction count</div>
+            <p class="font-35 font-weight-bold" style="font-size: 35px;">4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="p-2 col-md col-6">
+        <div class="cb100 card" style="background-color: #21D59B45; color: green;">
+          <div class="card-body">
+            <div class="font-18 font-weight-light">Daily Turnover</div>
+            <p class="font-29 font-weight-bold" style="font-size: 29px;">+ 174$</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 col-md col-6">
+        <div class="cb100 card" style="background-color: #f0142f6b;">
+          <div class="card-body">
+            <div class="font-18 font-weight-light">Yesterday's Turnover</div>
+            <p class="font-29 font-weight-bold" style="font-size: 29px; color: red;">- 174$</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 col-md col-6">
+        <div class="cb100 card" style="background-color: #21D59B45; color:green;">
+          <div class="card-body">
+            <div class="font-18 font-weight-light">This Week Turnover</div>
+            <p class="font-29 font-weight-bold" style="font-size: 29px;">+ 325$</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 col-md col-6">
+        <div class="cb100 card" style="background-color: #21D59B45; color:green;">
+          <div class="card-body">
+            <div class="font-18 font-weight-light">This Month Turnover</div>
+            <p class="font-29 font-weight-bold" style="font-size: 29px;">+ 546$</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 col-md col-6">
+        <div class="cb100 card" style="background-color: #21D59B45; color:green;">
+          <div class="card-body">
+            <div class="font-18 font-weight-light">Total Turnover</div>
+            <p class="font-29 font-weight-bold" style="font-size: 29px;">+ 1.246$</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-9">
+        <div class="row tradeFilter">
+          <div class="p-2 col-md col-12">
+            <div style="font-size: 18px;"><b>Last Trades</b></div>
+          </div>
+          <div class="p-2 col-md col-6">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="cbIsOpen" onchange="handleChange(event)"
+                checked />
+              <label class="custom-control-label" for="cbIsOpen">Open-Trades</label>
+            </div>
+          </div>
+          <div class="p-2 col-md col-6">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="cbIsClose" onchange="handleChange(event)"
+                checked />
+              <label class="custom-control-label" for="cbIsClose">Close-Trades</label>
+            </div>
+          </div>
+          <div class="p-2 col-md col-6">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="cbTradeBuy" onchange="handleChange(event)"
+                checked />
+              <label class="custom-control-label" for="cbTradeBuy">Buy-Trades</label>
+            </div>
+          </div>
+          <div class="p-2 col-md col-6">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="cbTradeSell" onchange="handleChange(event)"
+                checked />
+              <label class="custom-control-label" for="cbTradeSell">Sell-Trades</label>
+            </div>
+          </div>
+        </div>
+
+        <table id="lastTradesTable" class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">ORDER Time Stamp</th>
+              <th scope="col"></th>
+              <th scope="col">Realization Time Stamp</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="hidden openClose">OPEN</th>
+              <th class="font-22 tradeStatus" style="color: #F0142F;">SELL</th>
+              <td class="font-18">19.04.22 - 07:28</td>
+              <td class="font-22" style="color: #F0142F;">$ 42.341,00</td>
+              <td><svg xmlns="http://www.w3.org/2000/svg" width="34.167" height="2" viewBox="0 0 34.167 2">
+                  <path id="Path_491" data-name="Path 491" d="M2513,596.5h32.167" transform="translate(-2512 -595.5)"
+                    fill="none" stroke="#7e84a3" stroke-linecap="round" stroke-width="2" />
+                </svg>
+              </td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">OPEN</th>
+              <th class="font-22 tradeStatus" style="color: #21D59B;">BUY</th>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td class="font-22" style="color: #21D59B;">$ 41.241,00</td>
+              <td class="font-18">19.04.22 - 07:28</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#C2EFE5" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#21D59B" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">CLOSE</th>
+              <th class="font-22 tradeStatus">SELL</th>
+              <td class="font-18">19.04.22 - 07:21</td>
+              <td class="font-22">$ 41.291,00</td>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#d5d7e3" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#a1a7c4" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg></td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">CLOSE</th>
+              <th class="font-22 tradeStatus">BUY</th>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td class="font-22">$ 41.241,00</td>
+              <td class="font-18">19.04.22 - 07:28</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#d5d7e3" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#a1a7c4" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg></td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">CLOSE</th>
+              <th class="font-22 tradeStatus">SELL</th>
+              <td class="font-18">19.04.22 - 07:21</td>
+              <td class="font-22">$ 41.291,00</td>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#d5d7e3" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#a1a7c4" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg></td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">CLOSE</th>
+              <th class="font-22 tradeStatus">BUY</th>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td class="font-22">$ 41.241,00</td>
+              <td class="font-18">19.04.22 - 07:28</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#d5d7e3" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#a1a7c4" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg></td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">CLOSE</th>
+              <th class="font-22 tradeStatus">SELL</th>
+              <td class="font-18">19.04.22 - 07:21</td>
+              <td class="font-22">$ 41.291,00</td>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#d5d7e3" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#a1a7c4" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg></td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">CLOSE</th>
+              <th class="font-22 tradeStatus">BUY</th>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td class="font-22">$ 41.241,00</td>
+              <td class="font-18">19.04.22 - 07:28</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#d5d7e3" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#a1a7c4" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg></td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">CLOSE</th>
+              <th class="font-22 tradeStatus">SELL</th>
+              <td class="font-18">19.04.22 - 07:21</td>
+              <td class="font-22">$ 41.291,00</td>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#d5d7e3" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#a1a7c4" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg></td>
+            </tr>
+            <tr>
+              <th class="hidden openClose">CLOSE</th>
+              <th class="font-22 tradeStatus">BUY</th>
+              <td class="font-18">19.04.22 - 07:25</td>
+              <td class="font-22">$ 41.241,00</td>
+              <td class="font-18">19.04.22 - 07:28</td>
+              <td><svg width="58" height="58" version="1.1" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29" cy="29" r="29" fill="#d5d7e3" data-name="Ellipse 98" />
+                  <path d="m13.584 28.35 10.107 9.6177 21.47-20.43" fill="none" stroke="#a1a7c4" stroke-linecap="round"
+                    stroke-width="4.8212" data-name="Path 465" />
+                </svg></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <input type="number" class="form-control" id="tradeAmount" />
+                <label for="tradeAmount" class="label">Trade Amount</label>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="buyingPoint" />
+                <label for="buyingPoint" class="label">Buying Point</label>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="sellingPoint" />
+                <label for="sellingPoint" class="label">Selling Point</label>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="stopLoss" />
+                <label for="stopLoss" class="label">Stop Loss</label>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  SET LIMITS
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    setBtcValue("#btcPrice");
+
+    $(document).ready(function () {
+      $(".form-control").keyup(function () {
+        let floatingLabel = $(this).parent().find(".label");
+        if (this.value) $(floatingLabel).addClass("label-full");
+        else $(floatingLabel).removeClass("label-full");
+      });
+    });
+
+    function handleChange(event) {
+      let filters = {};
+      let switches = document.querySelectorAll(
+        ".tradeFilter .custom-control-input"
+      );
+
+      switches.forEach((s) => {
+        filters[s.id] = s.checked;
+      });
+
+      filterTable(filters);
+    }
+
+    function filterTable(filters) {
+      let rows = document.querySelectorAll("#lastTradesTable tbody tr");
+
+      rows?.forEach((element) => {
+        let statusCell = element.getElementsByClassName("tradeStatus")[0];
+        let openClose = element.getElementsByClassName("openClose")[0];
+
+        showRow(element);
+
+        if (filters?.cbTradeSell == false && statusCell.innerHTML == "SELL") {
+          hideRow(element);
+        }
+
+        if (filters?.cbTradeBuy == false && statusCell.innerHTML == "BUY") {
+          hideRow(element);
+        }
+
+        if (filters?.cbIsOpen == false && openClose.innerHTML == "OPEN") {
+          hideRow(element);
+        }
+
+        if (filters?.cbIsClose == false && openClose.innerHTML == "CLOSE") {
+          hideRow(element);
+        }
+      });
+    }
+
+    function showRow(row) {
+      row.setAttribute("style", "display: table-row");
+    }
+    function hideRow(row) {
+      row.setAttribute("style", "display: none");
+    }
+  </script>
+
+
+
+</body>
+
+</html>
